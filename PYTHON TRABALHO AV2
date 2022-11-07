@@ -1,0 +1,49 @@
+##########################################################################################################################################################
+
+def calcular_trapézio(amaior, amenor, altura):
+    return (amaior + amenor) * altura / 2
+    
+
+ama = float(input('Diga a base maior do seu trapézio: '))
+ame = float(input('Diga a base menor do seu trapézio: '))
+alt = float(input('Diga a altura do seu trapézio: '))
+calcular_trapézio(ama, ame, alt)
+print(f'A área do seu trapézio é: {calcular_trapézio(ama, ame, alt)}')
+
+##########################################################################################################################################################
+
+def somaImposto(taxaimp, custo):
+    return (1 + taxaimp/100) * custo
+
+
+t = float(input('Digite a taxa de imposto: '))
+c = float(input('Digite o custo: '))
+somaImposto(t, c)
+print(f'O valor com  o imposto é de: {somaImposto(t, c)}')
+
+##########################################################################################################################################################
+
+print('OBS: Caso deseje sair do programa, apenas digite algum horário negativo')
+
+def converte(hora):
+    return (hora - 12)
+        
+
+def printhora(hora, minuto):
+    a = 'AM'
+    p = 'PM'
+    if (hora <= 12):
+        print(f'{hora}:{minuto} {a}')
+    else:
+        print(f'{converte(hora)}:{minuto} {p}') 
+
+while True: 
+    hora = int(input('Digite que horas você deseja converter: '))
+    if hora < 0:
+        break
+    minuto = int(input('Digite, agora, os minutos: ')) 
+
+
+    printhora(hora, minuto)
+    
+##########################################################################################################################################################
